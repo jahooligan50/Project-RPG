@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class SwingSword : MonoBehaviour {
 
-    BoxCollider2D swordCol;
+    PolygonCollider2D swordCol;
 
 	// Use this for initialization
 	void Start () {
-        swordCol = GetComponent<BoxCollider2D>();
+        swordCol = GetComponent<PolygonCollider2D>();
 	}
 
-    public void FlipSwordSwitch()
+    public void FlipSwordSwitchOn()
     {
-        swordCol.enabled = !swordCol.enabled;
+        swordCol.enabled = true;
+    }
+
+    public void FlipSwordSwitchOff()
+    {
+        swordCol.enabled = false;
     }
 
     public bool GetSwordEnabled()
